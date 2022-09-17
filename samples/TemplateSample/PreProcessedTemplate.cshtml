@@ -1,0 +1,23 @@
+﻿@* Generator: Template *@
+@inherits CustomTemplateBase
+
+@functions {
+    public IEnumerable<TemplateSample.TestResult> TestResults { get; set; }
+}
+
+<?xml version="1.0" ?>
+<tests>
+    @foreach (var result in TestResults) { 
+        <test id="@result.Id">
+            <name>@result.Name</name>
+            <result>
+            @if(result.Passed) {
+                @: Success
+            }
+            else{
+                @: Failed
+            }
+            </result>
+        </test>
+    }
+</test>

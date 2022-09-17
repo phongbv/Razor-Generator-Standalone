@@ -1,0 +1,14 @@
+bin
+obj
+*.user
+*.suo
+App_Data
+*.results.xml
+/TestResults
+/packages
+/Results
+/artifacts
+*.vsix
+nuget.exe
+*.sln.ide
+.vs
